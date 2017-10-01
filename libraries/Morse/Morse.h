@@ -1,4 +1,6 @@
-//This is the header file for the Morse library
+// This is the header file for the Morse library
+// Authors: Joel Moore and Jeffrey Jevnikar
+// Date: September 30, 2017
 
 #ifndef Morse // Check if header is already loaded
 #define Morse
