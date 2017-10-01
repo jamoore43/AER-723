@@ -29,6 +29,7 @@ MorseCode::MorseCode(int buttonPin, int ledPinInput, int ledPinOutput, int eepro
 
 ///////////////////////////////////////////////////////////////////////////////////////
 // Check if the user is pressing the button or not and determine the appropriate symbol based on the elapsed time
+// Returns the character based on the time delay, so either dot, dash or space
 ///////////////////////////////////////////////////////////////////////////////////////
 
 char MorseCode::buttonPress() {
@@ -95,6 +96,8 @@ char MorseCode::buttonPress() {
 
 ///////////////////////////////////////////////////////////////////////////////////////
 // Write the character obtained from buttonPressed to the EEPROM. Each character is store to a different address.
+// Takes current EEEPROM address and character based on user input
+// No output, just writes the character to the EEPROM
 ///////////////////////////////////////////////////////////////////////////////////////
 
 void MorseCode::writeEEPROM(int MEMLOCATIONaddr, char DatByte_in) {
@@ -146,6 +149,7 @@ void MorseCode::writeEEPROM(int MEMLOCATIONaddr, char DatByte_in) {
 
 ///////////////////////////////////////////////////////////////////////////////////////
 // Turn led lights on and off to signal end of transmission
+// No input or output, just turns LEDs on and off
 ///////////////////////////////////////////////////////////////////////////////////////
 
 void MorseCode::ledEndTransmission() {
@@ -172,6 +176,7 @@ void MorseCode::ledEndTransmission() {
 
 ///////////////////////////////////////////////////////////////////////////////////////
 // Print message to the serial monitor and translate the Morse Code to english letters or numbers
+// Inputs include: EEPROM memory location and character. No outputs
 ///////////////////////////////////////////////////////////////////////////////////////
 
 void MorseCode::printMessage(int MEMLOCATIONaddr, char DatByte_out) {
@@ -229,6 +234,7 @@ void MorseCode::printMessage(int MEMLOCATIONaddr, char DatByte_out) {
 
 ///////////////////////////////////////////////////////////////////////////////////////
 // Translate morse code message into smaller morse cose sequences that represent individual letters
+// Inputs: string contaning all characters entered by the user and final memory address integer
 ///////////////////////////////////////////////////////////////////////////////////////
 
 void MorseCode::translate(String morseString, int counter) {
@@ -264,6 +270,8 @@ void MorseCode::translate(String morseString, int counter) {
 
 ///////////////////////////////////////////////////////////////////////////////////////
 // Convert series of dot/dash to english characters
+// Input: String containing series of characters pertaining to an Engligh letter or number
+// Output: None, just serial prints to monitor
 ///////////////////////////////////////////////////////////////////////////////////////
 
 void MorseCode::letterMorse(String morse)
