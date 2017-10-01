@@ -1,4 +1,7 @@
-// This is the source file for the Morse library.
+// This is the source file for the Morse library. it contains all of the intermediate functions
+// See report for more detail as to what each function does
+// Authors: Joel Moore and Jeffrey Jevnikar
+// Date: September 30, 2017
 
 #include "Morse.h"
 #include <Wire.h>
