@@ -1,3 +1,7 @@
+//Authors: Joel Moore and Jeffrey Jevnikar
+// Date: 09/03/2017
+// The following code will print the magnetometer reading and calibrated measurement to the serial monitor
+
 #include <Wire.h>
 #include <SPI.h>
 #include <SparkFunLSM9DS1.h>
