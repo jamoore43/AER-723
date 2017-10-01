@@ -10,8 +10,8 @@ int ledPin = 5;
 //////////////////////////
 // LSM9DS1 Library Init //
 //////////////////////////
-// Use the LSM9DS1 class to create an object named 'imu'
-LSM9DS1 imu;
+
+LSM9DS1 imu; // Use the LSM9DS1 class to create an object named 'imu'
 
 ///////////////
 // I2C Setup //
@@ -34,8 +34,7 @@ static unsigned long lastPrint = 0; // Keep track of print time
 ///////////////////////////////////////////////////////////////////////////////////////
 void setup()
 {
-  // Initialized serial output for monitoring of data
-  Serial.begin(115200);
+  Serial.begin(115200); // Initialized serial output for monitoring of data
 
   // Initializes IMU communcation via I2C
   imu.settings.device.commInterface = IMU_MODE_I2C;
@@ -54,9 +53,7 @@ void setup()
     while (1);
   }
 
-  // Sets up LED for output
-  pinMode(ledPin, OUTPUT);
-
+  pinMode(ledPin, OUTPUT); // Sets up LED for output
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////
