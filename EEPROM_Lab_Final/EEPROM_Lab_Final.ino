@@ -1,3 +1,8 @@
+//Authors: Joel Moore and Jeffrey Jevnikar
+// Date: 09/03/2017
+// The following code will accept Morse code input from the user, stores it onto an EEPROM and replays the message.
+// The message is also converted into English characters.
+
 #include <Wire.h> //I2C library
 #include <Morse.h> // Morse library
 
