@@ -1,0 +1,13 @@
+//Keywords for Morse library
+
+//Classes
+Morse		KEYWORD1
+morse		KEYWORD1
+MorseCode	KEYWORD1
+
+//Functions
+buttonPress		KEYWORD2
+translate		KEYWORD2
+ledEndTransmission	KEYWORD2
+writeEPROM		KEYWORD2
+printMESSAGE		KEYWORD2
